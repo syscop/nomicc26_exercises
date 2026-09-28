@@ -280,6 +280,7 @@ def truck_gear_selection_minlp():
         # Shift indication
         # -----------------------------------------------------------
         if k > 0:
+            pass
             # Implement shift indication and sequential gear constraints here!
 
         force_variables.append(Fk)
@@ -303,7 +304,6 @@ def truck_gear_selection_minlp():
         "speed": dsc.get_indices("v"),
         "force": dsc.get_indices("F"),
         "gear": dsc.get_indices("z"),
-        "shift": dsc.get_indices("q_shift"),
     }
 
     return problem, minlp_data, indices, cfg
@@ -373,7 +373,7 @@ if __name__ == "__main__":
 
     selected_gear = np.argmax(gear_binary, axis=1) + 1
 
-    if len(indices["shift"]) > 0:
+    if "shift" in indices and len(indices["shift"]) > 0:
         shift = np.array([
             x_sol[int(stage_indices[0])]
             for stage_indices in indices["shift"]
