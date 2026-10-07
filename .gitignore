@@ -221,3 +221,10 @@ __marimo__/
 # images:
 *.png
 *.gif
+
+# exercise solutions
+exercises/ballthrow/*pdf
+exercises/water-network/WaterNetwork.aux
+exercises/water-network/WaterNetwork.out
+exercises/water-network/WaterNetwork.pdf
+
