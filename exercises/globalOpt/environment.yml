@@ -1,0 +1,16 @@
+# Environment for the globalOpt tutorial (TutorialGO): scripts q1_rlt.py ... q4_eig.py
+#   conda env create -f environment.yml && conda activate globalopt
+# Versions are the ones that produced answers.pdf.
+name: globalopt
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - numpy==2.4.3
+      - scipy==1.17.1
+      - sympy==1.14.0
+      - matplotlib==3.10.9
+      - casadi==3.8.1
+      - unopy==0.4.10
